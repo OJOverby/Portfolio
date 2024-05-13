@@ -7,8 +7,56 @@
     <title>Portfolio Website - Ole Jørgen</title>
 </head>
 <body>
-    <header></header>
-    <main></main>
+    <header>
+        <a href="#home"><h1>Ole Jørgen</h1></a>
+        <nav class="navbar">
+            <a href="#about">About me</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact me</a>
+        </nav>
+    </header>
+    <main>
+        <section id="home">
+            <h1>Ole Jørgen Øverby</h1>
+            <h2>Frontend student</h2>
+        </section>
+        <section id="about">
+            <div class="aboutme-card">
+                <div class="about-info">
+                <h2>Ole Jørgen Øverby</h2>
+                <h3>Frontend Student</h3>
+                <p>Lorem ipsum for now....</p>
+                </div>
+                <div class="about-img"><img src="" alt="Ole Jørgen profile picture"></div>
+            </div>
+        </section>
+        <section id="projects">
+            <h2>Projects</h2>
+            <div class="card-container">
+                <div class="card">Card 1</div>
+                <div class="card">Card 2</div>
+                <div class="card"> Card 3</div>
+            </div>
+        </section>
+        <section id="contact">
+            <form class="contact-form" id="contactForm" action="sendMail.php" method="post">
+                <h2>Contact me</h2>
+                <label for="name">Name:</label>
+                <input type="text" name="name" id="name">
+                <div class="error-msg" id="nameError">You need to enter a name. Atleast 3 letters.</div>
+                <label for="email">E-mail:</label>
+                <input type="email" name="email" id="email">
+                <div class="error-msg" id="emailError">You need to enter a valid email address</div>
+                <label for="subject">Subject:</label>
+                <input type="text" name="subject" id="subject">
+                <div class="error-msg" id="subjectError">You need to enter a subject, atleast 10 letters long.</div>
+                <label for="message">Message:</label>
+                <textarea name="message" id="message" cols="20" rows="10"></textarea>
+                <div class="error-msg" id="msgError">Ops, you forgot your message. Atleast 10 letters long.</div>
+                <div class="centered"><button class="CTA sendFormButton" type="submit"><h2>SEND</h2></button></div>
+                </form>
+        </section>
+    </main>
     <footer></footer>
 </body>
 </html>
