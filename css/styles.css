@@ -4,6 +4,10 @@
     font-family: "Inter", sans-serif;
 }
 
+html {
+    scroll-padding-top: 50px;
+}
+
 :root {
     --background: #2A2359;
     --primary: #48358C;
@@ -12,6 +16,9 @@
 
 #home, #about, #projects, #contact {
     height: 100vh;
+    min-height: fit-content;
+    padding: 20px;
+    box-sizing: border-box;
 }
 
 #home, #projects {
@@ -69,7 +76,57 @@ header {
 .card-container  {
     display: grid;
     grid-template-columns: auto auto auto;
+    justify-items: center;
 }
+
+.card {
+    display: flex;
+    flex-direction: column;
+    height: 400px;
+    width: 300px;
+    background-color: var(--primary);
+    align-items: center;
+    text-align: center;
+    border-radius: 20px;
+}
+
+.screenshot-container {
+    margin: 20px;
+    width: 90%;
+    height: 200px;
+    background-color: #2A2359;
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: cover;
+    border-radius: 5px;
+}
+#gamehub {
+    background-image: url(/images/GameHub/incandescent-lamington-2d6891.netlify.app_allgames.png);
+}
+
+#cms {
+    background-image: url(/images/CSM/dulcet-bavarois-79dbb9.netlify.app_.png);
+}
+
+#tenacioustraveler {
+    background-image: url(/images/TenaciousTraveler/tenacioustraveler.netlify.app_.png);
+
+}
+
+.screenshot-container:hover {
+    animation: scrolldown 1s ease-in-out forwards;
+}
+
+@keyframes scrolldown {
+    0% {
+        background-position: top;
+    }
+
+    100% {
+        background-position: bottom;
+    }
+}
+
 
 /* Contact section CSS */
 
