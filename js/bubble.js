@@ -11,7 +11,7 @@ function createBubble() {
     while (currentBubbles < maxBubbles) {
         let bubble = document.createElement("div");
         bubble.classList.add("bubble");
-        bubble.style.left = Math.random() * 100 + "%";
+        bubble.style.left = Math.random() * 95 + "%";
         bubble.style.animationDelay = Math.random() * 7 + "s";
         bubble.style.scale = Math.random() * 0.9 + 0.1;
         bubbleContainer.appendChild(bubble);
@@ -20,11 +20,18 @@ function createBubble() {
             let childSpan = document.createElement("span");
             bubble.appendChild(childSpan);
         }
-        // Removes the bubbles (replace with burst animation later)
         bubble.addEventListener("click", function() {
-            bubbleContainer.removeChild(bubble);
-            currentBubbles--;
-            createBubble();
+            const bubbleStyles = window.getComputedStyle(bubble);
+            const top = bubbleStyles.getPropertyValue("top");
+            bubble.style.top = top;
+            bubble.style.animation = null;
+                bubble.classList.add("burst");
+                bubble.addEventListener("animationend", function() {
+                    bubbleContainer.removeChild(bubble);
+                    currentBubbles--;
+                    createBubble(); 
+                });
+         
         });
         currentBubbles++;
     }
