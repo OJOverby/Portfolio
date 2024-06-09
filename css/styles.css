@@ -43,11 +43,16 @@ button {
     margin: 10px;
 }
 
+button:hover {
+    cursor: pointer;
+}
+
 #home, #about, #contact {
-    height: 100vh;
-    min-height: fit-content;
+    height: fit-content;
+    min-height: 100vh;
     padding: 20px;
     box-sizing: border-box;
+    overflow: auto;
 }
 
 #projects {
@@ -331,5 +336,25 @@ header {
     .card-container {
         grid-template-columns: auto;
 
+    }
+
+    .aboutme-card {
+
+        flex-direction: column-reverse;
+    }
+
+    .about-img img {
+        height: 300px;
+        width: auto;
+        border-radius: 20%;
+        opacity: 0.9;
+    }
+
+    .about-info {
+        padding: 5px;
+    }
+
+    .contact-form {
+        width: 60%;
     }
 }
