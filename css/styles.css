@@ -479,8 +479,12 @@ input, textarea {
     }
 
     .aboutme-card {
-
         flex-direction: column-reverse;
+        width: 90%;
+        padding: 10px;
+        p, h2, h3 {
+            padding: 5px 0px;
+        }
     }
 
     .about-img img {
@@ -523,5 +527,10 @@ input, textarea {
     .mobile-menu {
         display: block;
     }
+
+    #about {
+        padding: 10px;
+    }
+
 
 }
