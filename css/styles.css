@@ -376,7 +376,7 @@ header {
 
 .card-container  {
     display: grid;
-    grid-template-columns: auto auto;
+    grid-template-columns: 1fr 1fr;
     gap: 10px;
     justify-items: center;
 }
@@ -394,6 +394,11 @@ header {
 
 .card p {
     padding: 10px 50px;
+    margin: 0 30px;
+}
+
+.card a {
+width: 90%;
 }
 
 .screenshot-container {
@@ -406,6 +411,8 @@ header {
     background-size: cover;
     border-radius: 5px;
 }
+
+
 #gamehub {
     background-image: url(/images/GameHub/incandescent-lamington-2d6891.netlify.app_allgames.png);
 }
