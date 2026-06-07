@@ -460,8 +460,8 @@ width: 90%;
 
 .icon-container img {
     margin: 20px;
-    width: 10%;
-    height: auto;
+    width: auto;
+    height: 6rem;
 }
 
 /* Contact section CSS */
